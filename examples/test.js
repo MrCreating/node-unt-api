@@ -1,4 +1,4 @@
-require("./../index.js");
+const unt = require("./../index.js");
 
 const accessKey = "";
 if (accessKey !== "")
