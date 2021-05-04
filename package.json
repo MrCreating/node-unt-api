@@ -1,0 +1,20 @@
+{
+  "name": "unt-bot-api",
+  "version": "1.0.0",
+  "description": "yunNet. API library",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./examples/test.js"
+  },
+  "keywords": [
+    "unt",
+    "yunnet",
+    "api",
+    "bots"
+  ],
+  "author": "MrCreating",
+  "license": "MIT",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
