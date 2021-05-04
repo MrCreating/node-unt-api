@@ -18,6 +18,8 @@ class Bot {
 			return new Promise(function (resolve, reject) {
 				return request.get((url + '&last_event_id=' + currentObject.getLastEventId()), function (err, res, body) {
 					let response = JSON.parse(body);
+					
+					currentObject.setLastEventId(response.last_event_id + 1);
 
 					if (response.error)
 						return reject();
@@ -25,7 +27,6 @@ class Bot {
 					callback(response);
 					listenEvents(url);
 
-					currentObject.setLastEventId(response.last_event_id + 1);
 					return resolve(response);
 				})
 			});
